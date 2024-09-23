@@ -1,6 +1,14 @@
 jaffle_shop:
-  target: dev
+  target: prod
   outputs:
+    prod:
+      type: postgres
+      host: db
+      schema: public
+      port: 5432
+      dbname: postgres
+      user: postgres
+      password: password
     dev:
       type: postgres
       host: localhost
@@ -9,13 +17,3 @@ jaffle_shop:
       dbname: postgres
       user: postgres
       password: postgres
-  target: prod
-  outputs:
-    dev:
-      type: postgres
-      host: localhost
-      schema: public
-      port: 5432
-      dbname: postgres
-      user: postgres
-      password: password
