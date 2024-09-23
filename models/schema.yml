@@ -33,6 +33,11 @@ models:
     columns:
       - name: order_id
         description: "Unique identifier for the order"
+        meta:
+          metrics:
+            total_order_count:
+              type: count_distinct
+              
       - name: customer_id
         description: "Unique identifier for the customer"
       - name: order_date
@@ -45,11 +50,15 @@ models:
         description: "Method used for payment"
       - name: amount
         description: "Total amount of the payment"
+        meta:
+          metrics:
+            total_amount_count:
+              type: sum
       - name: first_name
         description: "First name of the customer"
       - name: last_name
         description: "Last name of the customer"
-        
+
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
 
