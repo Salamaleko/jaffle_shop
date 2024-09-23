@@ -28,7 +28,28 @@ models:
 
       - name: total_order_amount
         description: Total value (AUD) of a customer's orders
-
+  - name: daily_sales
+    description: "A table combining order and customer information."
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order"
+      - name: customer_id
+        description: "Unique identifier for the customer"
+      - name: order_date
+        description: "Date when the order was placed"
+      - name: status
+        description: "Current status of the order"
+      - name: payment_id
+        description: "Unique identifier for the payment associated with the order"
+      - name: payment_method
+        description: "Method used for payment"
+      - name: amount
+        description: "Total amount of the payment"
+      - name: first_name
+        description: "First name of the customer"
+      - name: last_name
+        description: "Last name of the customer"
+        
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
 
